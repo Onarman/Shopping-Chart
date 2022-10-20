@@ -1,14 +1,14 @@
 import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import logoOn from "../../assets/logoOn.jpg"
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import Badge from '@mui/material/Badge';
+
 export default function ButtonAppBar() {
   return (
-    <Box sx={{ flexGrow: 1 }}>
       <AppBar position="fixed" color="inherit" sx={{borderBottom:"1px solid rgba(0,0,0,0.12)"}}>
         <Toolbar>
           <IconButton
@@ -21,11 +21,14 @@ export default function ButtonAppBar() {
             <img src={logoOn} height="45px"></img>
           </IconButton>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            News
+            NarmanStore
           </Typography>
-          <Button color="inherit">Login</Button>
+
+          <Badge badgeContent={4} color="error">
+                <ShoppingCartIcon/>
+          </Badge>
+          
         </Toolbar>
       </AppBar>
-    </Box>
   );
 }
