@@ -7,7 +7,7 @@ import logoOn from "../../assets/logoOn.jpg"
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import Badge from '@mui/material/Badge';
 
-export default function ButtonAppBar() {
+export default function ButtonAppBar({totalProduct}) {
   return (
       <AppBar position="fixed" color="inherit" sx={{borderBottom:"1px solid rgba(0,0,0,0.12)"}}>
         <Toolbar>
@@ -24,7 +24,7 @@ export default function ButtonAppBar() {
             NarmanStore
           </Typography>
 
-          <Badge badgeContent={4} color="error">
+          <Badge badgeContent={totalProduct} color="error">
                 <ShoppingCartIcon/>
           </Badge>
           
